@@ -215,7 +215,7 @@ const BorderLinearProgress = styled(LinearProgress)`
 `;
 
 const ShimmerTitle = styled.h1`
-  margin: 00px;
+  margin: 5px;
   text-transform: uppercase;
   animation: glow 2s ease-in-out infinite alternate;
   color: var(--main-text-color);
@@ -230,7 +230,7 @@ const ShimmerTitle = styled.h1`
 `;
 
 const ShimmerTitle2 = styled.h2`
-  margin:-10px;
+  margin:5px;
   text-transform: uppercase;
   animation: glow 2s ease-in-out infinite alternate;
   color: var(--main-text-color);
@@ -502,19 +502,21 @@ const Home = (props: HomeProps) => {
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle style={{fontSize:"80px"}}>MINT IS LIVE !</ShimmerTitle>
+                <ShimmerTitle style={{fontSize:"3.6em"}}>MINT IS LIVE !</ShimmerTitle>
                 <br/>
 
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <ShimmerTitle2><h2>Gold'O Hero</h2></ShimmerTitle2>
+                            <ShimmerTitle2 style={{fontSize:'2.5em' }} >Gold'O Hero</ShimmerTitle2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
                                 src="goldMin.jpg"
-                                alt="NFT To Mint"/></div>
+                                alt="NFT To Mint" 
+                                style={{ width:'auto', height:'auto', maxWidth:"100%"}}  />
+                            </div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
                               <h3>You have {whitelistTokenBalance} whitelist mint(s) remaining.</h3>}
