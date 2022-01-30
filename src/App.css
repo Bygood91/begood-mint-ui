@@ -13,6 +13,12 @@ body{
   font-size: 1.2em;
 }
 
+.particles{
+  position: fixed;
+  width: 100%;
+  z-index: -15;
+}
+
 h2, p{
   color: var(--main-text-color);
 }

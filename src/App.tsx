@@ -1,5 +1,8 @@
 import "./App.css";
 import Home from "./Home";
+import Particles from "react-tsparticles";
+import particlesOptions from "./particles.json";
+import { ISourceOptions } from "tsparticles";
 import { useMemo } from "react";
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -57,6 +60,7 @@ const theme = createTheme({
 });
 
 const App = () => {
+  
   const endpoint = useMemo(() => clusterApiUrl(network), []);
 
   const wallets = useMemo(
@@ -75,6 +79,7 @@ const App = () => {
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
+            <Particles className="particles" options={particlesOptions as ISourceOptions}/>
               <Home
                 candyMachineId={candyMachineId}
                 connection={connection}
