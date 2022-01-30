@@ -30,7 +30,7 @@ const WalletContainer = styled.div`
   justify-content: center;
 `;
 const NFT = styled(Paper)`
-  min-width: 400px;
+  min-width: 200px;
   padding: 5px 20px 20px 20px;
   flex: 1 1 auto;
 `;
@@ -215,7 +215,8 @@ const BorderLinearProgress = styled(LinearProgress)`
 `;
 
 const ShimmerTitle = styled.h1`
-  margin: 5px;
+  margin-bottom: 0px;
+  margin-top: -20px;
   text-transform: uppercase;
   animation: glow 2s ease-in-out infinite alternate;
   color: var(--main-text-color);
@@ -512,7 +513,8 @@ const Home = (props: HomeProps) => {
                             <ShimmerTitle2 style={{fontSize:'2.5em' }} >Gold'O Hero</ShimmerTitle2>
                             <br/>
                             <div><Price
-                                label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
+                                label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/>
+                                <Image
                                 src="goldMin.jpg"
                                 alt="NFT To Mint" 
                                 style={{ width:'auto', height:'auto', maxWidth:"100%"}}  />
