@@ -484,10 +484,10 @@ const Home = (props: HomeProps) => {
     return (
         <main>
 
-            <Image
+           {/* <Image
                 src="fond.jpg"
                 alt="NFT To Mint" style={{ position:'fixed', top:'0', left:'0', verticalAlign:'top', minWidth:'100%', minHeight:'100%', zIndex:-1 }}
-            />
+           /> */}
              <MainContainer>
                 <WalletContainer>
                     <Logo>
