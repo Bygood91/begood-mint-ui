@@ -294,11 +294,11 @@ const Home = (props: HomeProps) => {
         message: "",
         severity: undefined,
     });
-
+  
+    const rpcUrl = props.rpcHost;
+  
     const wallet = useAnchorWallet();
     const [candyMachine, setCandyMachine] = useState<CandyMachine>();
-
-    const rpcUrl = props.rpcHost;
 
     const refreshCandyMachineState = () => {
         (async () => {
