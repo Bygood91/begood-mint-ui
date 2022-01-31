@@ -39,12 +39,12 @@ const Des = styled(NFT)`
   padding-top: 0px;
 `;
 
-const Card = styled(Paper)`
-  display: inline-block;
-  background-color: var(--card-background-lighter-color) !important;
-  margin: 5px;
-  padding: 24px;
-`;
+//const Card = styled(Paper)`
+//  display: inline-block;
+//  background-color: var(--card-background-lighter-color) !important;
+//  margin: 5px;
+//  padding: 24px;
+//`;
 
 const Time = styled(Paper)`
   display: inline-block;
