@@ -503,7 +503,11 @@ const Home = (props: HomeProps) => {
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle style={{fontSize:"3.6em"}}>MINT IS LIVE !</ShimmerTitle>
+                <ShimmerTitle style={{fontSize:"3.6em"}}>{
+                  candyMachine?.state.isSoldOut ? "SOLD OUT !" :
+                  candyMachine?.state.isActive ? "MINT IS LIVE !" : 
+                  whitelistEnabled && (whitelistTokenBalance > 0) ? "PRESALE ACCES !" : 
+                  "COMMING SOON !"}</ShimmerTitle>
                 <br/>
 
 
@@ -520,7 +524,7 @@ const Home = (props: HomeProps) => {
                                 style={{ width:'auto', height:'auto', maxWidth:"100%"}}  />
                             </div>
                             <br/>
-                            {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
+                            {wallet && !candyMachine?.state.isSoldOut && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
                               <h3>You have {whitelistTokenBalance} whitelist mint(s) remaining.</h3>}
                             {wallet && isActive &&
                                 /* <p>Total Minted : {100 - (itemsRemaining * 100 / itemsAvailable)}%</p>}*/
