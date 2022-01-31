@@ -46,6 +46,13 @@ const Card = styled(Paper)`
   padding: 24px;
 `;
 
+const Time = styled(Paper)`
+  display: inline-block;
+  background-color: var(--card-background-lighter-color) !important;
+  margin: 5px;
+  padding: 0px 24px 5px 24px;
+`;
+
 const MintButtonContainer = styled.div`
   button.MuiButton-contained:not(.MuiButton-containedPrimary).Mui-disabled {
     color: #464646;
@@ -364,9 +371,9 @@ const Home = (props: HomeProps) => {
 
     const renderCounter = ({days, hours, minutes, seconds}: any) => {
         return (
-            <div><Card elevation={1}><h1>{days}</h1><br/>Days</Card><Card elevation={1}><h1>{hours}</h1>
-                <br/>Hours</Card><Card elevation={1}><h1>{minutes}</h1><br/>Mins</Card><Card elevation={1}>
-                <h1>{seconds}</h1><br/>Secs</Card></div>
+            <div><Time elevation={1}><h1>{days}</h1><br/>Days</Time><Time elevation={1}><h1>{hours}</h1>
+                <br/>Hours</Time><Time elevation={1}><h1>{minutes}</h1><br/>Mins</Time><Time elevation={1}>
+                <h1>{seconds}</h1><br/>Secs</Time></div>
         );
     };
 
