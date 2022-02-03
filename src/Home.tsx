@@ -15,7 +15,7 @@ import {
   getCandyMachineState,
   mintOneToken,
 } from './candy-machine';
-import { Header } from './Header';
+// import { Header } from './Header';
 import { MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 import { WalletMultiButton } from "@solana/wallet-adapter-material-ui";
