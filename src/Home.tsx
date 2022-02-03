@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 import * as anchor from '@project-serum/anchor';
 import confetti from "canvas-confetti";
 import styled from 'styled-components';
-import { Container, Snackbar, Chip } from '@material-ui/core';
+import { Snackbar, Chip } from '@material-ui/core';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Paper from '@material-ui/core/Paper';
 import Alert from '@material-ui/lab/Alert';
@@ -82,38 +82,6 @@ const Logo = styled.div`
 
   img {
     height: 60px;
-  }
-`;
-const Menu = styled.ul`
-  list-style: none;
-  display: inline-flex;
-  flex: 1 0 auto;
-
-  li {
-    margin: 0 12px;
-
-    a {
-      color: var(--main-text-color);
-      list-style-image: none;
-      list-style-position: outside;
-      list-style-type: none;
-      outline: none;
-      text-decoration: none;
-      text-size-adjust: 100%;
-      touch-action: manipulation;
-      transition: color 0.3s;
-      padding-bottom: 15px;
-
-      img {
-        max-height: 26px;
-      }
-    }
-
-    a:hover, a:active {
-      color: rgb(131, 146, 161);
-      border-bottom: 4px solid var(--title-text-color);
-    }
-
   }
 `;
 
@@ -534,7 +502,7 @@ const Home = (props: HomeProps) => {
     anchorWallet,
     props.candyMachineId,
     props.connection,
-    // refreshCandyMachineState,
+    refreshCandyMachineState,
   ]);
 
   return (
